@@ -1,0 +1,8 @@
+colorscheme slate
+syntax on
+set noswapfile
+set nu rnu
+set hlsearch
+set ignorecase
+set incsearch
+
