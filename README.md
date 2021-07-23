@@ -5,10 +5,17 @@ dotfiles for my linux config
 ## Info
 
 OS : Arch Linux
+
 WM : i3
+
+Compositor : picom
+
 Shell : zsh
+
 Terminal : terminator
+
 Theme : Dracula
+
 Icon : Papirus-Dark
 
 ## Screenshots
