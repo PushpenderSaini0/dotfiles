@@ -207,7 +207,7 @@ smart_gaps inverse_outer
 smart_borders on
 
 ## Set BG
-exec feh --bg-scale '/home/psaini/Pictures/wallpaper/arch2.png'
+exec --no-startup-id feh --bg-scale '/home/psaini/Pictures/wallpaper/arch2.png'
 
 ## Start compositor
-exec_always picom
+exec --no-startup-id picom
