@@ -172,19 +172,17 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-
-        status_command i3status
+        mode invisible
+        #status_command i3status
         position bottom
-        
 
-        font Nimbus Sans
 
     colors {
-        background #161616
+        background #282a36
         statusline #F9FAF9
         separator  #454947
 
-#                      border  backgr. text
+#                          border  backgr. text
         focused_workspace  #F9FAF9 #16a085 #292F34
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
@@ -193,7 +191,8 @@ bar {
     }
 }
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
+bindsym $mod+m exec --no-startup-id /home/psaini/.config/i3/scripts/i3bartoggle.sh
 
 ####
 bindsym $mod+F2 exec firefox
@@ -203,8 +202,12 @@ bindsym $mod+F3 exec pcmanfm
 # Set inner/outer gaps
 gaps inner 14
 gaps outer -2
-smart_gaps on
+#show outer gaps when only 1 container
+smart_gaps inverse_outer
 smart_borders on
 
 ## Set BG
 exec feh --bg-scale '/home/psaini/Pictures/wallpaper/arch2.png'
+
+## Start compositor
+exec_always picom
